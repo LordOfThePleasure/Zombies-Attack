@@ -7,8 +7,6 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject gameOver;
 
-    [SerializeField] private EnemySpawner enemySpawner;
-
     private void Start()
     {
         MainMenuButton();
@@ -30,10 +28,6 @@ public class UIManager : MonoBehaviour
         Pause(true);
         mainMenu.SetActive(true);
         gameOver.SetActive(false);
-
-        ObjectPooler.instance.DisableObjects();
-        Score.instance.ResetScore();
-        enemySpawner.ResetSpawnTime();
     }
 
     public void GameOver()

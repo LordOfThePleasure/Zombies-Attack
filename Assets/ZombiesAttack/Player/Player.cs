@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
     public static Transform playerTransform;
-    [SerializeField] private UIManager uiManager;
+    public UnityEvent OnDeath;
 
     private void Awake()
     {
@@ -16,7 +17,7 @@ public class Player : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            uiManager.GameOver();
+            OnDeath?.Invoke();
         }
     }
 }

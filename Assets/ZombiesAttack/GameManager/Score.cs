@@ -30,7 +30,7 @@ public class Score : MonoBehaviour
         }
 
         currentScoreText.text = "Score: " + currentScore.ToString();
-        gameOverScoreText.text = "Your score: " + currentScore.ToString();
+        gameOverScoreText.text = "Your score:\n" + currentScore.ToString();
     }
 
     private void SetHighscore(int score)
@@ -44,6 +44,6 @@ public class Score : MonoBehaviour
     {
         currentScore = 0;
         currentScoreText.text = "Score: " + currentScore.ToString();
-        gameOverScoreText.text = "Your score: " + currentScore.ToString();
+        gameOverScoreText.text = "Your score:\n" + currentScore.ToString();
     }
 }
